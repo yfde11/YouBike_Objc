@@ -11,6 +11,7 @@
 		7BAD9BED1EC151AF006DB809 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAD9BEC1EC151AF006DB809 /* AppDelegate.m */; };
 		7BAD9BF51EC151AF006DB809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BAD9BF41EC151AF006DB809 /* Assets.xcassets */; };
 		7BAD9BF81EC151AF006DB809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAD9BF61EC151AF006DB809 /* LaunchScreen.storyboard */; };
+		7BAD9C021EC166E9006DB809 /* YouBikeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAD9C011EC166E9006DB809 /* YouBikeManager.m */; };
 		9E91EB5774F1A4E0A06A821C /* libPods-YouBike_Objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 923A3DEAC363EAFF168D06B3 /* libPods-YouBike_Objc.a */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 		7BAD9BF41EC151AF006DB809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BAD9BF71EC151AF006DB809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BAD9BF91EC151AF006DB809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BAD9C001EC16609006DB809 /* YouBikeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouBikeManager.h; sourceTree = "<group>"; };
+		7BAD9C011EC166E9006DB809 /* YouBikeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouBikeManager.m; sourceTree = "<group>"; };
 		923A3DEAC363EAFF168D06B3 /* libPods-YouBike_Objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YouBike_Objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD36F8B16191802CDC184C20 /* Pods-YouBike_Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouBike_Objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-YouBike_Objc/Pods-YouBike_Objc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +73,7 @@
 			children = (
 				7BAD9BEB1EC151AF006DB809 /* AppDelegate.h */,
 				7BAD9BEC1EC151AF006DB809 /* AppDelegate.m */,
+				7BAD9BFF1EC165C0006DB809 /* YouBikeManager */,
 				7BAD9BF41EC151AF006DB809 /* Assets.xcassets */,
 				7BAD9BF61EC151AF006DB809 /* LaunchScreen.storyboard */,
 				7BAD9BF91EC151AF006DB809 /* Info.plist */,
@@ -84,6 +88,15 @@
 				7BAD9BE91EC151AF006DB809 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7BAD9BFF1EC165C0006DB809 /* YouBikeManager */ = {
+			isa = PBXGroup;
+			children = (
+				7BAD9C001EC16609006DB809 /* YouBikeManager.h */,
+				7BAD9C011EC166E9006DB809 /* YouBikeManager.m */,
+			);
+			name = YouBikeManager;
 			sourceTree = "<group>";
 		};
 		A121482DB3DED7A7F73BBC77 /* Pods */ = {
@@ -218,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BAD9BED1EC151AF006DB809 /* AppDelegate.m in Sources */,
+				7BAD9C021EC166E9006DB809 /* YouBikeManager.m in Sources */,
 				7BAD9BEA1EC151AF006DB809 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +387,7 @@
 				7BAD9BFE1EC151AF006DB809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
