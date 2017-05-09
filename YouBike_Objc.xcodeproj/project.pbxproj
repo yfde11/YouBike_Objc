@@ -13,6 +13,10 @@
 		7BAD9BF81EC151AF006DB809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAD9BF61EC151AF006DB809 /* LaunchScreen.storyboard */; };
 		9B8AF6021EC1624400AEE0A8 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8AF6011EC1624400AEE0A8 /* LogInViewController.m */; };
 		9B8AF6051EC1663600AEE0A8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8AF6041EC1663600AEE0A8 /* Login.storyboard */; };
+		9B8AF6081EC19E5400AEE0A8 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8AF6071EC19E5400AEE0A8 /* ProfileViewController.m */; };
+		9B8AF60B1EC1A1E100AEE0A8 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8AF60A1EC1A1E100AEE0A8 /* Tabbar.storyboard */; };
+		9B8AF60D1EC1A20400AEE0A8 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8AF60C1EC1A20400AEE0A8 /* Profile.storyboard */; };
+		9B8AF6111EC1A50700AEE0A8 /* TabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8AF6101EC1A50700AEE0A8 /* TabbarViewController.m */; };
 		9E91EB5774F1A4E0A06A821C /* libPods-YouBike_Objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 923A3DEAC363EAFF168D06B3 /* libPods-YouBike_Objc.a */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +33,12 @@
 		9B8AF6001EC1624400AEE0A8 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		9B8AF6011EC1624400AEE0A8 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		9B8AF6041EC1663600AEE0A8 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		9B8AF6061EC19E5400AEE0A8 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		9B8AF6071EC19E5400AEE0A8 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		9B8AF60A1EC1A1E100AEE0A8 /* Tabbar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		9B8AF60C1EC1A20400AEE0A8 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		9B8AF60F1EC1A50700AEE0A8 /* TabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarViewController.h; sourceTree = "<group>"; };
+		9B8AF6101EC1A50700AEE0A8 /* TabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarViewController.m; sourceTree = "<group>"; };
 		FD36F8B16191802CDC184C20 /* Pods-YouBike_Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouBike_Objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-YouBike_Objc/Pods-YouBike_Objc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +90,8 @@
 				7BAD9BF91EC151AF006DB809 /* Info.plist */,
 				7BAD9BE81EC151AF006DB809 /* Supporting Files */,
 				9B8AF6031EC1624C00AEE0A8 /* Login */,
+				9B8AF6091EC19E5E00AEE0A8 /* Profile */,
+				9B8AF60E1EC1A40900AEE0A8 /* Tabbar */,
 			);
 			path = YouBike_Objc;
 			sourceTree = "<group>";
@@ -95,11 +107,31 @@
 		9B8AF6031EC1624C00AEE0A8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				9B8AF6011EC1624400AEE0A8 /* LogInViewController.m */,
 				9B8AF6001EC1624400AEE0A8 /* LogInViewController.h */,
+				9B8AF6011EC1624400AEE0A8 /* LogInViewController.m */,
 				9B8AF6041EC1663600AEE0A8 /* Login.storyboard */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		9B8AF6091EC19E5E00AEE0A8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9B8AF6061EC19E5400AEE0A8 /* ProfileViewController.h */,
+				9B8AF6071EC19E5400AEE0A8 /* ProfileViewController.m */,
+				9B8AF60C1EC1A20400AEE0A8 /* Profile.storyboard */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		9B8AF60E1EC1A40900AEE0A8 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				9B8AF60A1EC1A1E100AEE0A8 /* Tabbar.storyboard */,
+				9B8AF60F1EC1A50700AEE0A8 /* TabbarViewController.h */,
+				9B8AF6101EC1A50700AEE0A8 /* TabbarViewController.m */,
+			);
+			name = Tabbar;
 			sourceTree = "<group>";
 		};
 		A121482DB3DED7A7F73BBC77 /* Pods */ = {
@@ -173,7 +205,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8AF60B1EC1A1E100AEE0A8 /* Tabbar.storyboard in Resources */,
 				7BAD9BF81EC151AF006DB809 /* LaunchScreen.storyboard in Resources */,
+				9B8AF60D1EC1A20400AEE0A8 /* Profile.storyboard in Resources */,
 				7BAD9BF51EC151AF006DB809 /* Assets.xcassets in Resources */,
 				9B8AF6051EC1663600AEE0A8 /* Login.storyboard in Resources */,
 			);
@@ -234,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8AF6111EC1A50700AEE0A8 /* TabbarViewController.m in Sources */,
 				7BAD9BED1EC151AF006DB809 /* AppDelegate.m in Sources */,
 				7BAD9BEA1EC151AF006DB809 /* main.m in Sources */,
+				9B8AF6081EC19E5400AEE0A8 /* ProfileViewController.m in Sources */,
 				9B8AF6021EC1624400AEE0A8 /* LogInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

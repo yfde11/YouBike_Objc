@@ -8,6 +8,7 @@
 
 #import "LogInViewController.h"
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "TabbarViewController.h"
 
 @interface LogInViewController ()
 
@@ -18,14 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    _loginBtn.titleLabel.text = @"Login with Facebook";
+
     [_loginBtn setTitle:@"Login with Facebook" forState:UIControlStateNormal];
     _btnBackView.layer.cornerRadius = 10;
     _btnBackView2.layer.cornerRadius = 10;
-    
-    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
-    loginButton.center = self.view.center;
-    [self.view addSubview:loginButton];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"wood"]];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,6 +32,28 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
+- (IBAction)loginBtnClicked:(id)sender {
+    FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+    [login
+     logInWithReadPermissions: @[@"public_profile"]
+     fromViewController:self
+     handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+         if (error) {
+             NSLog(@"Process error");
+         } else if (result.isCancelled) {
+             NSLog(@"Cancelled");
+         } else {
+             NSLog(@"Logged in");
+             //jump to tabbar controller
+//             UIStoryboard *storyboard=[UIStoryboard storyboardWithName:@"Tabbar" bundle:[NSBundle mainBundle]];
+//             TabbarViewController *tabVC = [storyboard instantiateViewControllerWithIdentifier:@"tabbar"];
+//             UIApplication.sharedApplication.keyWindow.rootViewController = tabVC;
+             NSString * storyboardName = @"Tabbar";
+             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+             UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"tabbarView"];
+             [self presentViewController:vc animated:YES completion:nil];
+             
+         }
+     }];
+}
 @end

@@ -12,7 +12,7 @@
         <!--Log In View Controller-->
         <scene sceneID="X9r-E1-mi1">
             <objects>
-                <viewController id="m2K-wJ-Qbz" customClass="LogInViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="m2K-wJ-Qbz" customClass="LogInViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kBk-bf-82O"/>
                         <viewControllerLayoutGuide type="bottom" id="2Yc-UT-3dF"/>
@@ -49,6 +49,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginBtnClicked:" destination="m2K-wJ-Qbz" eventType="touchUpInside" id="2oC-NK-ns7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.30506515502929688" green="0.41079241037368774" blue="0.6348535418510437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
