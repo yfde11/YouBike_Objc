@@ -18,7 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 
     [_loginBtn setTitle:@"Login with Facebook" forState:UIControlStateNormal];
     _btnBackView.layer.cornerRadius = 10;
@@ -31,6 +30,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 - (IBAction)loginBtnClicked:(id)sender {
     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
@@ -45,9 +45,6 @@
          } else {
              NSLog(@"Logged in");
              //jump to tabbar controller
-//             UIStoryboard *storyboard=[UIStoryboard storyboardWithName:@"Tabbar" bundle:[NSBundle mainBundle]];
-//             TabbarViewController *tabVC = [storyboard instantiateViewControllerWithIdentifier:@"tabbar"];
-//             UIApplication.sharedApplication.keyWindow.rootViewController = tabVC;
              NSString * storyboardName = @"Tabbar";
              UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
              UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"tabbarView"];

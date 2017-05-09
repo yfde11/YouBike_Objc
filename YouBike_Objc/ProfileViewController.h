@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *facePicture;
+@property (weak, nonatomic) IBOutlet UILabel *fbUserName;
+@property (weak, nonatomic) IBOutlet UIView *fbconnBtnview2;
+@property (weak, nonatomic) IBOutlet UIView *fbconnBtnview;
+- (IBAction)fbConnect:(id)sender;
 
 @end
