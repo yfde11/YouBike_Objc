@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="m2K-wJ-Qbz">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Log In View Controller-->
+        <scene sceneID="X9r-E1-mi1">
+            <objects>
+                <viewController id="m2K-wJ-Qbz" customClass="LogInViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kBk-bf-82O"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Yc-UT-3dF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fJQ-J8-7ZE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bnc-44-Zwx">
+                                <rect key="frame" x="68" y="322" width="279" height="64"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFB-7B-44k">
+                                        <rect key="frame" x="0.0" y="32" width="279" height="32"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhd-Ro-9DF">
+                                                <rect key="frame" x="0.0" y="0.0" width="279" height="12"/>
+                                                <color key="backgroundColor" red="0.22943970559999999" green="0.34702008960000003" blue="0.59602290390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="12" id="Qn8-ix-iUE"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.22943970561027527" green="0.34702008962631226" blue="0.59602290391921997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="uhd-Ro-9DF" firstAttribute="top" secondItem="WFB-7B-44k" secondAttribute="top" id="1FX-SX-7Fu"/>
+                                            <constraint firstAttribute="height" constant="32" id="Ko8-dO-IoZ"/>
+                                            <constraint firstItem="uhd-Ro-9DF" firstAttribute="leading" secondItem="WFB-7B-44k" secondAttribute="leading" id="e2U-gi-VDz"/>
+                                            <constraint firstAttribute="trailing" secondItem="uhd-Ro-9DF" secondAttribute="trailing" id="f1m-sa-4JW"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nd4-QD-m4c">
+                                        <rect key="frame" x="0.0" y="0.0" width="279" height="64"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="20"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.30506515502929688" green="0.41079241037368774" blue="0.6348535418510437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="WFB-7B-44k" secondAttribute="trailing" id="3Qo-U0-LPy"/>
+                                    <constraint firstAttribute="bottom" secondItem="WFB-7B-44k" secondAttribute="bottom" id="BQl-nM-2WD"/>
+                                    <constraint firstAttribute="height" constant="64" id="CTh-ye-PuV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nd4-QD-m4c" secondAttribute="trailing" id="F2H-mA-cdI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nd4-QD-m4c" secondAttribute="bottom" id="bhS-2A-6Rz"/>
+                                    <constraint firstItem="Nd4-QD-m4c" firstAttribute="top" secondItem="Bnc-44-Zwx" secondAttribute="top" id="hvY-h1-WaT"/>
+                                    <constraint firstItem="WFB-7B-44k" firstAttribute="leading" secondItem="Bnc-44-Zwx" secondAttribute="leading" id="rTf-4r-GdS"/>
+                                    <constraint firstItem="Nd4-QD-m4c" firstAttribute="leading" secondItem="Bnc-44-Zwx" secondAttribute="leading" id="xXV-f9-nFV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bnc-44-Zwx" firstAttribute="leading" secondItem="fJQ-J8-7ZE" secondAttribute="leading" constant="68" id="3ug-8j-IAO"/>
+                            <constraint firstAttribute="trailing" secondItem="Bnc-44-Zwx" secondAttribute="trailing" constant="67" id="JMo-qI-GR6"/>
+                            <constraint firstItem="Bnc-44-Zwx" firstAttribute="top" secondItem="kBk-bf-82O" secondAttribute="bottom" constant="302" id="epQ-eF-41J"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnBackView" destination="Bnc-44-Zwx" id="WW1-hR-YsQ"/>
+                        <outlet property="btnBackView2" destination="WFB-7B-44k" id="wPG-rm-ddW"/>
+                        <outlet property="loginBtn" destination="Nd4-QD-m4c" id="qXR-DN-hAt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pCG-rr-hfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="262.31884057971018" y="87.228260869565219"/>
+        </scene>
+    </scenes>
+</document>
