@@ -7,6 +7,8 @@
 //
 
 #import "ProfileNavgationViewController.h"
+#import "ProfileViewController.h"
+#import <UIKit/UIKit.h>
 
 @interface ProfileNavgationViewController ()
 
@@ -17,21 +19,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIStoryboard *pSB = [UIStoryboard storyboardWithName:@"Profile" bundle:nil];
+    ProfileViewController *pVC = [pSB instantiateViewControllerWithIdentifier:@"profilePage"];
+    [self pushViewController:pVC animated:true];
+    
+//    [self.navigationController setViewControllers:[NSArray arrayWithObject:pVC] animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

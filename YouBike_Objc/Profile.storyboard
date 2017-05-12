@@ -13,7 +13,7 @@
         <!--Profile View Controller-->
         <scene sceneID="Fyt-RV-Q9Z">
             <objects>
-                <viewController storyboardIdentifier="profile" id="F32-sB-UBm" customClass="ProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profilePage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="F32-sB-UBm" customClass="ProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fOp-KW-egZ"/>
                         <viewControllerLayoutGuide type="bottom" id="9pZ-v0-35i"/>
