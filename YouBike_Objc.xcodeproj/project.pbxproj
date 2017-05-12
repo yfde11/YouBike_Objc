@@ -12,6 +12,12 @@
 		7BAD9BF51EC151AF006DB809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BAD9BF41EC151AF006DB809 /* Assets.xcassets */; };
 		7BAD9BF81EC151AF006DB809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAD9BF61EC151AF006DB809 /* LaunchScreen.storyboard */; };
 		7BAD9C061EC1883D006DB809 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BAD9C051EC1883D006DB809 /* Default-568h@2x.png */; };
+		840982C31EC56B65001C97AD /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840982C21EC56B65001C97AD /* MapView.storyboard */; };
+		842AE3B81EC1AD7A0098BD1B /* MapTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842AE3B71EC1AD7A0098BD1B /* MapTableViewController.m */; };
+		842AE3BC1EC1AD950098BD1B /* MapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 842AE3BA1EC1AD950098BD1B /* MapTableViewCell.m */; };
+		842AE3BD1EC1AD950098BD1B /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842AE3BB1EC1AD950098BD1B /* MapTableViewCell.xib */; };
+		842AE3C11EC1B9B40098BD1B /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 842AE3BF1EC1B9B40098BD1B /* CommentTableViewCell.m */; };
+		842AE3C21EC1B9B40098BD1B /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842AE3C01EC1B9B40098BD1B /* CommentTableViewCell.xib */; };
 		9B8AF6021EC1624400AEE0A8 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8AF6011EC1624400AEE0A8 /* LogInViewController.m */; };
 		9B8AF6051EC1663600AEE0A8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8AF6041EC1663600AEE0A8 /* Login.storyboard */; };
 		9E91EB5774F1A4E0A06A821C /* libPods-YouBike_Objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 923A3DEAC363EAFF168D06B3 /* libPods-YouBike_Objc.a */; };
@@ -27,6 +33,15 @@
 		7BAD9BF71EC151AF006DB809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BAD9BF91EC151AF006DB809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BAD9C051EC1883D006DB809 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		840982C21EC56B65001C97AD /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
+		842AE3B61EC1AD7A0098BD1B /* MapTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTableViewController.h; sourceTree = "<group>"; };
+		842AE3B71EC1AD7A0098BD1B /* MapTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTableViewController.m; sourceTree = "<group>"; };
+		842AE3B91EC1AD950098BD1B /* MapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTableViewCell.h; sourceTree = "<group>"; };
+		842AE3BA1EC1AD950098BD1B /* MapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTableViewCell.m; sourceTree = "<group>"; };
+		842AE3BB1EC1AD950098BD1B /* MapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
+		842AE3BE1EC1B9B40098BD1B /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		842AE3BF1EC1B9B40098BD1B /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		842AE3C01EC1B9B40098BD1B /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		923A3DEAC363EAFF168D06B3 /* libPods-YouBike_Objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YouBike_Objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B8AF6001EC1624400AEE0A8 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		9B8AF6011EC1624400AEE0A8 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
@@ -57,6 +72,7 @@
 		7BAD9BDC1EC151AF006DB809 = {
 			isa = PBXGroup;
 			children = (
+				842AE3B51EC1AD500098BD1B /* MapView */,
 				7BAD9C051EC1883D006DB809 /* Default-568h@2x.png */,
 				7BAD9BE71EC151AF006DB809 /* YouBike_Objc */,
 				7BAD9BE61EC151AF006DB809 /* Products */,
@@ -93,6 +109,22 @@
 				7BAD9BE91EC151AF006DB809 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		842AE3B51EC1AD500098BD1B /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				842AE3B61EC1AD7A0098BD1B /* MapTableViewController.h */,
+				842AE3B71EC1AD7A0098BD1B /* MapTableViewController.m */,
+				840982C21EC56B65001C97AD /* MapView.storyboard */,
+				842AE3B91EC1AD950098BD1B /* MapTableViewCell.h */,
+				842AE3BA1EC1AD950098BD1B /* MapTableViewCell.m */,
+				842AE3BB1EC1AD950098BD1B /* MapTableViewCell.xib */,
+				842AE3BE1EC1B9B40098BD1B /* CommentTableViewCell.h */,
+				842AE3BF1EC1B9B40098BD1B /* CommentTableViewCell.m */,
+				842AE3C01EC1B9B40098BD1B /* CommentTableViewCell.xib */,
+			);
+			name = MapView;
 			sourceTree = "<group>";
 		};
 		9B8AF6031EC1624C00AEE0A8 /* Login */ = {
@@ -148,7 +180,7 @@
 				TargetAttributes = {
 					7BAD9BE41EC151AF006DB809 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 99E6PZ48K5;
+						DevelopmentTeam = MN2W9A4J94;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -177,8 +209,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BAD9BF81EC151AF006DB809 /* LaunchScreen.storyboard in Resources */,
+				840982C31EC56B65001C97AD /* MapView.storyboard in Resources */,
+				842AE3C21EC1B9B40098BD1B /* CommentTableViewCell.xib in Resources */,
 				7BAD9C061EC1883D006DB809 /* Default-568h@2x.png in Resources */,
 				7BAD9BF51EC151AF006DB809 /* Assets.xcassets in Resources */,
+				842AE3BD1EC1AD950098BD1B /* MapTableViewCell.xib in Resources */,
 				9B8AF6051EC1663600AEE0A8 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842AE3BC1EC1AD950098BD1B /* MapTableViewCell.m in Sources */,
+				842AE3C11EC1B9B40098BD1B /* CommentTableViewCell.m in Sources */,
+				842AE3B81EC1AD7A0098BD1B /* MapTableViewController.m in Sources */,
 				7BAD9BED1EC151AF006DB809 /* AppDelegate.m in Sources */,
 				7BAD9BEA1EC151AF006DB809 /* main.m in Sources */,
 				9B8AF6021EC1624400AEE0A8 /* LogInViewController.m in Sources */,
@@ -355,7 +393,7 @@
 			baseConfigurationReference = 58BD20D4EF183D6E6FF36015 /* Pods-YouBike_Objc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 99E6PZ48K5;
+				DEVELOPMENT_TEAM = MN2W9A4J94;
 				INFOPLIST_FILE = YouBike_Objc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YouBike-Objc";
@@ -368,7 +406,7 @@
 			baseConfigurationReference = FD36F8B16191802CDC184C20 /* Pods-YouBike_Objc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 99E6PZ48K5;
+				DEVELOPMENT_TEAM = MN2W9A4J94;
 				INFOPLIST_FILE = YouBike_Objc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YouBike-Objc";
