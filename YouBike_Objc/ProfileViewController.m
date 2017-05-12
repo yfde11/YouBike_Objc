@@ -7,7 +7,7 @@
 //
 
 #import "ProfileViewController.h"
-
+#import "ProfileNavgationViewController.h"
 @interface ProfileViewController ()
 
 @end
@@ -19,7 +19,7 @@
     _fbconnBtnview.layer.cornerRadius = 10;
     _fbconnBtnview2.layer.cornerRadius = 10;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"wood"]];
-    
+    self.navigationItem.title = @"eat shit";
 }
 
 - (void)didReceiveMemoryWarning {
