@@ -50,10 +50,10 @@
         <!--Profile-->
         <scene sceneID="f3m-qN-PX2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LdQ-Pc-2RA" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LdQ-Pc-2RA" customClass="ProfileNavgationViewController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="ZUm-Ro-Qje"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="4tj-zg-Xai">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="4tj-zg-Xai">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.23988333340000001" green="0.20260009170000001" blue="0.26042404769999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
