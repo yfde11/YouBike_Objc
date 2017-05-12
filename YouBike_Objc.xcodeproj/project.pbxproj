@@ -215,6 +215,7 @@
 			files = (
 				9B8AF60B1EC1A1E100AEE0A8 /* Tabbar.storyboard in Resources */,
 				7BAD9BF81EC151AF006DB809 /* LaunchScreen.storyboard in Resources */,
+
 				9B8AF60D1EC1A20400AEE0A8 /* Profile.storyboard in Resources */,
 
 				7BAD9BF51EC151AF006DB809 /* Assets.xcassets in Resources */,
