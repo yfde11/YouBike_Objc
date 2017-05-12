@@ -45,6 +45,8 @@
 
         } else {
 
+            Station *stations = [Station new];
+            [stations address];
             // Unbox JSON
         }
         

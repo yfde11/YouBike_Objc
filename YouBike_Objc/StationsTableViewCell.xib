@@ -15,8 +15,60 @@
             <rect key="frame" x="0.0" y="0.0" width="545" height="159"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="545" height="158.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="545" height="159"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FAo-hZ-3Cd">
+                        <rect key="frame" x="17" y="9" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="pth-9j-XxK"/>
+                            <constraint firstAttribute="width" constant="30" id="yhG-CF-AYd"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25a-gb-KoQ">
+                        <rect key="frame" x="52" y="10" width="488" height="28"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uU6-Tg-czC">
+                        <rect key="frame" x="369" y="100" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0q-LX-30r">
+                        <rect key="frame" x="488" y="100" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUO-7R-mVn">
+                        <rect key="frame" x="426" y="100" width="42" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwz-A8-tev">
+                        <rect key="frame" x="20" y="44" width="49" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="25a-gb-KoQ" secondAttribute="trailing" constant="5" id="1CA-2c-j3f"/>
+                    <constraint firstItem="rwz-A8-tev" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Dg9-Wd-cP7"/>
+                    <constraint firstItem="rwz-A8-tev" firstAttribute="top" secondItem="FAo-hZ-3Cd" secondAttribute="bottom" constant="5" id="XjY-vW-hKd"/>
+                    <constraint firstItem="25a-gb-KoQ" firstAttribute="centerY" secondItem="FAo-hZ-3Cd" secondAttribute="centerY" id="YUe-Uc-nxq"/>
+                    <constraint firstItem="FAo-hZ-3Cd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="ayk-9O-ydL"/>
+                    <constraint firstItem="FAo-hZ-3Cd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="dGB-YK-vLu"/>
+                    <constraint firstItem="25a-gb-KoQ" firstAttribute="leading" secondItem="FAo-hZ-3Cd" secondAttribute="trailing" constant="5" id="p68-Ta-Yfh"/>
+                </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="58.5" y="34.5"/>
         </tableViewCell>
