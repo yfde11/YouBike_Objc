@@ -12,6 +12,8 @@
 		7BAD9BF51EC151AF006DB809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BAD9BF41EC151AF006DB809 /* Assets.xcassets */; };
 		7BAD9BF81EC151AF006DB809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAD9BF61EC151AF006DB809 /* LaunchScreen.storyboard */; };
 		7BAD9C061EC1883D006DB809 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BAD9C051EC1883D006DB809 /* Default-568h@2x.png */; };
+		7BAD9C121EC1BD19006DB809 /* YoubikeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAD9C111EC1BD19006DB809 /* YoubikeManager.m */; };
+		7BAD9C141EC1CB6F006DB809 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BAD9C131EC1CB6F006DB809 /* libAFNetworking.a */; };
 		9B8AF6021EC1624400AEE0A8 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8AF6011EC1624400AEE0A8 /* LogInViewController.m */; };
 		9B8AF6051EC1663600AEE0A8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8AF6041EC1663600AEE0A8 /* Login.storyboard */; };
 		9E91EB5774F1A4E0A06A821C /* libPods-YouBike_Objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 923A3DEAC363EAFF168D06B3 /* libPods-YouBike_Objc.a */; };
@@ -27,6 +29,10 @@
 		7BAD9BF71EC151AF006DB809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BAD9BF91EC151AF006DB809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BAD9C051EC1883D006DB809 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		7BAD9C081EC1A19E006DB809 /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
+		7BAD9C101EC1BD19006DB809 /* YoubikeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoubikeManager.h; sourceTree = "<group>"; };
+		7BAD9C111EC1BD19006DB809 /* YoubikeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoubikeManager.m; sourceTree = "<group>"; };
+		7BAD9C131EC1CB6F006DB809 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "../../../Library/Developer/Xcode/DerivedData/YouBike_Objc-ccqhmvmryeoofxfhptrnxujtdxic/Build/Products/Debug-iphonesimulator/AFNetworking/libAFNetworking.a"; sourceTree = "<group>"; };
 		923A3DEAC363EAFF168D06B3 /* libPods-YouBike_Objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YouBike_Objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B8AF6001EC1624400AEE0A8 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		9B8AF6011EC1624400AEE0A8 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
@@ -39,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BAD9C141EC1CB6F006DB809 /* libAFNetworking.a in Frameworks */,
 				9E91EB5774F1A4E0A06A821C /* libPods-YouBike_Objc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,6 +56,7 @@
 		679ECB95427BFBE779B4C112 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7BAD9C131EC1CB6F006DB809 /* libAFNetworking.a */,
 				923A3DEAC363EAFF168D06B3 /* libPods-YouBike_Objc.a */,
 			);
 			name = Frameworks;
@@ -79,6 +87,7 @@
 				7BAD9BEB1EC151AF006DB809 /* AppDelegate.h */,
 				7BAD9BEC1EC151AF006DB809 /* AppDelegate.m */,
 				7BAD9BF41EC151AF006DB809 /* Assets.xcassets */,
+				7BAD9C071EC19E9E006DB809 /* Model */,
 				7BAD9BF61EC151AF006DB809 /* LaunchScreen.storyboard */,
 				7BAD9BF91EC151AF006DB809 /* Info.plist */,
 				7BAD9BE81EC151AF006DB809 /* Supporting Files */,
@@ -93,6 +102,16 @@
 				7BAD9BE91EC151AF006DB809 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7BAD9C071EC19E9E006DB809 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7BAD9C081EC1A19E006DB809 /* Station.h */,
+				7BAD9C101EC1BD19006DB809 /* YoubikeManager.h */,
+				7BAD9C111EC1BD19006DB809 /* YoubikeManager.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		9B8AF6031EC1624C00AEE0A8 /* Login */ = {
@@ -240,6 +259,7 @@
 			files = (
 				7BAD9BED1EC151AF006DB809 /* AppDelegate.m in Sources */,
 				7BAD9BEA1EC151AF006DB809 /* main.m in Sources */,
+				7BAD9C121EC1BD19006DB809 /* YoubikeManager.m in Sources */,
 				9B8AF6021EC1624400AEE0A8 /* LogInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
