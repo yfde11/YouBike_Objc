@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Station Info Controller-->
+        <scene sceneID="Afe-Vs-d15">
+            <objects>
+                <viewController storyboardIdentifier="StationInfoController" automaticallyAdjustsScrollViewInsets="NO" id="PQm-gN-cQi" customClass="StationInfoController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c80-Ze-kmc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ufh-Mv-OQ4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="igG-SU-7s6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wtf-K1-I9x">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YtO-Kz-AXa">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lHP-hL-bhf">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="G7I-8D-fD3">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YtO-Kz-AXa" firstAttribute="leading" secondItem="igG-SU-7s6" secondAttribute="leading" id="367-0T-pOf"/>
+                            <constraint firstItem="Ufh-Mv-OQ4" firstAttribute="top" secondItem="YtO-Kz-AXa" secondAttribute="bottom" id="5Ql-Q9-pqb"/>
+                            <constraint firstItem="YtO-Kz-AXa" firstAttribute="top" secondItem="c80-Ze-kmc" secondAttribute="bottom" id="AAT-kF-3Za"/>
+                            <constraint firstItem="wtf-K1-I9x" firstAttribute="leading" secondItem="igG-SU-7s6" secondAttribute="leading" id="GqQ-yb-bzf"/>
+                            <constraint firstItem="wtf-K1-I9x" firstAttribute="top" secondItem="c80-Ze-kmc" secondAttribute="bottom" id="IdK-Y8-rM5"/>
+                            <constraint firstAttribute="trailing" secondItem="wtf-K1-I9x" secondAttribute="trailing" id="eal-n5-tEC"/>
+                            <constraint firstAttribute="trailing" secondItem="YtO-Kz-AXa" secondAttribute="trailing" id="hTu-Pf-9Bb"/>
+                            <constraint firstItem="Ufh-Mv-OQ4" firstAttribute="top" secondItem="wtf-K1-I9x" secondAttribute="bottom" id="orZ-pN-1PM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="B2F-4W-ZdX">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Q81-EV-4SF">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="OWD-73-7O7">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="listSwitch" destination="Q81-EV-4SF" id="AVM-F4-JzQ"/>
+                        <outlet property="stationsCollectionView" destination="YtO-Kz-AXa" id="fbs-Lc-GGN"/>
+                        <outlet property="stationsTableView" destination="wtf-K1-I9x" id="Ymy-0N-xLc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="njF-2j-Owq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="-834"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bjb-Q6-e0O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zDP-eV-1VJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ac6-rs-saX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PQm-gN-cQi" kind="relationship" relationship="rootViewController" id="yhN-2q-dNh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uql-RU-ewp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1170" y="-834"/>
+        </scene>
+    </scenes>
+</document>
