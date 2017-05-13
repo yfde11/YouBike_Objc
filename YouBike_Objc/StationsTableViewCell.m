@@ -1,22 +1,19 @@
 //
-//  CommentTableViewCell.m
+//  StationsTableViewCell.m
 //  YouBike_Objc
 //
-//  Created by 謝豐任 on 2017/5/9.
+//  Created by 劉洧熏 on 2017/5/12.
 //  Copyright © 2017年 劉洧熏. All rights reserved.
 //
 
-#import "CommentTableViewCell.h"
+#import "StationsTableViewCell.h"
 
-@implementation CommentTableViewCell
+@implementation StationsTableViewCell
 
-//    @synthesize profileImage = profileImage;
-//    @synthesize userName = userName;
-//    @synthesize comment = comment;
-    
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
