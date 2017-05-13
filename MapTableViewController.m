@@ -35,7 +35,7 @@ enum Componets {
     _identifier = [NSString new];
     _identifier = @"CommentTableViewCell";
     
-    componetsArray = [[NSArray alloc] initWithObjects: @"a", @"sss", nil];
+    componetsArray = [[NSArray alloc] initWithObjects: @"a", @"sss", @"ddCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCelld", nil];
     
     UINib *cellNib = [UINib nibWithNibName:_identifier bundle:nil];
     
@@ -73,9 +73,9 @@ enum Componets {
 //    }
 //    commentCell.comment = componetsArray[indexPath.row];
     
-    UITableViewCell *commentCell = [tableView dequeueReusableCellWithIdentifier:_identifier forIndexPath:indexPath];
+    CommentTableViewCell *commentCell = [tableView dequeueReusableCellWithIdentifier:_identifier forIndexPath:indexPath];
     
-    
+    commentCell.comment.text = componetsArray[indexPath.row];
     return commentCell;
 }
 
