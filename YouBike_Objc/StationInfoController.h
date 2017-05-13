@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Station.h"
 
 @interface StationInfoController : UIViewController
 
