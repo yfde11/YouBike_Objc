@@ -9,7 +9,6 @@
 #import "CommentTableViewCell.h"
 
 @implementation CommentTableViewCell
-
 //    @synthesize profileImage = profileImage;
 //    @synthesize userName = userName;
 //    @synthesize comment = comment;
