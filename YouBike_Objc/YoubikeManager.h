@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking.h>
-#import "Station.h"
+#import "Stations.h"
 
 @interface YoubikeManager : AFHTTPSessionManager
 
 + (instancetype) shared;
 
-- (void) getStations: (void (^) (Station *stationsFromAPI, NSError *error))block;
+- (void) getStations: (void (^) (Stations *stationsFromAPI, NSError *error))block;
 
 @end
