@@ -62,7 +62,7 @@
 
 -(void)getFacebookProfileInfos {
     NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
-    [parameters setValue:@"id,first_name,email,link,last_name" forKey:@"fields"];
+    [parameters setValue:@"id,first_name,email,link,last_name,picture.type(large)" forKey:@"fields"];
 
 
     FBSDKGraphRequest *requestMe = [[FBSDKGraphRequest alloc]initWithGraphPath:@"me" parameters:parameters];
@@ -99,6 +99,13 @@
                 NSLog(@"Email: %@",[result objectForKey:@"email"]);
                 [[NSUserDefaults standardUserDefaults] setObject:[result objectForKey:@"email"] forKey:@"email"];
                 
+            }if ([result objectForKey:@"picture"]) {
+
+                NSLog(@"picture: %@",[result objectForKey:@"picture"]);
+                NSDictionary *picDic = [result objectForKey:@"picture"];
+                NSLog(@"data::: %@", picDic[@"data"]);
+                NSDictionary *picUrlDic = picDic[@"data"];
+                [[NSUserDefaults standardUserDefaults] setObject:picUrlDic[@"url"] forKey:@"url"];
             }
 
         }

@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *fbUserName;
 @property (weak, nonatomic) IBOutlet UIView *fbconnBtnview2;
 @property (weak, nonatomic) IBOutlet UIView *fbconnBtnview;
+@property (weak, nonatomic) IBOutlet UIView *backYellowView;
 - (IBAction)fbConnect:(id)sender;
 
 @end

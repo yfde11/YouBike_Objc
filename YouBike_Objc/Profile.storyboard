@@ -6,7 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -86,9 +86,9 @@
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="naw-oY-SyC">
-                                        <rect key="frame" x="99" y="31" width="153" height="138"/>
+                                        <rect key="frame" x="99" y="18" width="177" height="177"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="138" id="Wik-hJ-yGI"/>
+                                            <constraint firstAttribute="width" secondItem="naw-oY-SyC" secondAttribute="height" multiplier="1:1" id="uCE-f4-yw0"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -97,12 +97,13 @@
                                     <constraint firstItem="b38-al-AeY" firstAttribute="leading" secondItem="wmA-2J-55Y" secondAttribute="leading" constant="20" id="2VM-s7-h9Y"/>
                                     <constraint firstAttribute="trailing" secondItem="A15-Py-3PF" secondAttribute="trailing" constant="20" id="4NC-JH-6u1"/>
                                     <constraint firstItem="OfS-kR-kDV" firstAttribute="leading" secondItem="wmA-2J-55Y" secondAttribute="leading" id="5Yd-N6-Gbs"/>
-                                    <constraint firstItem="naw-oY-SyC" firstAttribute="top" secondItem="wmA-2J-55Y" secondAttribute="top" constant="31" id="5r3-5j-sRN"/>
-                                    <constraint firstItem="naw-oY-SyC" firstAttribute="leading" secondItem="wmA-2J-55Y" secondAttribute="leading" constant="99" id="9dj-Lu-LI8"/>
+                                    <constraint firstItem="naw-oY-SyC" firstAttribute="top" secondItem="wmA-2J-55Y" secondAttribute="top" constant="18" id="8rd-s6-SF2"/>
                                     <constraint firstItem="A15-Py-3PF" firstAttribute="leading" secondItem="wmA-2J-55Y" secondAttribute="leading" constant="20" id="GZb-mV-u3C"/>
                                     <constraint firstItem="OfS-kR-kDV" firstAttribute="top" secondItem="wmA-2J-55Y" secondAttribute="top" id="Hwy-96-mMl"/>
                                     <constraint firstItem="A15-Py-3PF" firstAttribute="top" secondItem="OfS-kR-kDV" secondAttribute="bottom" constant="20" id="MdQ-jW-DuM"/>
+                                    <constraint firstItem="naw-oY-SyC" firstAttribute="leading" secondItem="wmA-2J-55Y" secondAttribute="leading" constant="99" id="QCc-G6-puG"/>
                                     <constraint firstItem="b38-al-AeY" firstAttribute="top" secondItem="A15-Py-3PF" secondAttribute="bottom" constant="50" id="RNq-UU-xby"/>
+                                    <constraint firstAttribute="trailing" secondItem="naw-oY-SyC" secondAttribute="trailing" constant="98" id="VEM-Qh-ywD"/>
                                     <constraint firstAttribute="trailing" secondItem="b38-al-AeY" secondAttribute="trailing" constant="20" id="e3r-YJ-rW5"/>
                                     <constraint firstAttribute="trailing" secondItem="OfS-kR-kDV" secondAttribute="trailing" id="oGG-PZ-YKk"/>
                                 </constraints>
@@ -113,11 +114,11 @@
                             <constraint firstItem="wmA-2J-55Y" firstAttribute="top" secondItem="fOp-KW-egZ" secondAttribute="bottom" constant="20" id="dNT-mS-Kp0"/>
                             <constraint firstAttribute="trailing" secondItem="wmA-2J-55Y" secondAttribute="trailing" constant="20" id="k0f-bE-F7h"/>
                             <constraint firstItem="9pZ-v0-35i" firstAttribute="top" secondItem="wmA-2J-55Y" secondAttribute="bottom" constant="20" id="oVu-yX-bou"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="naw-oY-SyC" secondAttribute="trailing" constant="122" id="qR0-sl-Vn2"/>
                             <constraint firstItem="wmA-2J-55Y" firstAttribute="leading" secondItem="aXy-iO-Yuq" secondAttribute="leading" constant="20" id="smJ-oC-vTq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backYellowView" destination="wmA-2J-55Y" id="A07-FG-vG1"/>
                         <outlet property="facePicture" destination="naw-oY-SyC" id="cd9-6x-xHI"/>
                         <outlet property="fbUserName" destination="A15-Py-3PF" id="Gqt-2P-dck"/>
                         <outlet property="fbconnBtnview" destination="b38-al-AeY" id="JQy-3g-xMa"/>
@@ -126,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDx-zd-d4u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="42" y="158"/>
+            <point key="canvasLocation" x="41.25" y="157.5"/>
         </scene>
     </scenes>
     <resources>

@@ -20,10 +20,22 @@
     [super viewDidLoad];
     _fbconnBtnview.layer.cornerRadius = 10;
     _fbconnBtnview2.layer.cornerRadius = 10;
+    _backYellowView.layer.cornerRadius = 20;
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"wood"]];
     self.navigationItem.title = @"Profile";
 
     _fbUserName.text = [[NSUserDefaults standardUserDefaults]stringForKey:@"firstName"];
+    NSURL *imageUrl = [NSURL URLWithString:[[NSUserDefaults standardUserDefaults]stringForKey:@"url"]];
+    NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation([UIImage imageWithData:[NSData dataWithContentsOfURL:imageUrl]])];
+    UIImage *image = [UIImage imageWithData:imageData];
+
+    _facePicture.image = image;
+    _facePicture.layer.cornerRadius = _facePicture.frame.size.width /2;
+    _facePicture.clipsToBounds = YES;
+    _facePicture.layer.borderWidth = 6;
+
+    UIColor *color = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.3];
+    _facePicture.layer.borderColor = color.CGColor;
 }
 
 - (void)didReceiveMemoryWarning {

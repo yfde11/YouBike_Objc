@@ -82,7 +82,6 @@
                                                     if (error) {
                                                         NSLog(@"%@", error);
                                                     } else {
-//                                                        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
                                                         NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
                                                         NSDictionary *dataObject = jsonObject[@"data"];
                                                         [[NSUserDefaults standardUserDefaults] setObject:dataObject[@"token"] forKey:@"token"];
