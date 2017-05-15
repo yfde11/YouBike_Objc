@@ -13,6 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *stationsTableView;
 @property (weak, nonatomic) IBOutlet UICollectionView *stationsCollectionView;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *listSwitch;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *listSwitch;
+
+- (IBAction)switchList:(UISegmentedControl *)sender;
 
 @end

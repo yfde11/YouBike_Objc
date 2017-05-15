@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zDP-eV-1VJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -67,11 +67,14 @@
                                     <segment title="First"/>
                                     <segment title="Second"/>
                                 </segments>
+                                <connections>
+                                    <action selector="switchList:" destination="PQm-gN-cQi" eventType="valueChanged" id="zUA-Tn-xli"/>
+                                </connections>
                             </segmentedControl>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="listSwitch" destination="Q81-EV-4SF" id="AVM-F4-JzQ"/>
+                        <outlet property="listSwitch" destination="OWD-73-7O7" id="fFm-8K-G2Z"/>
                         <outlet property="stationsCollectionView" destination="YtO-Kz-AXa" id="fbs-Lc-GGN"/>
                         <outlet property="stationsTableView" destination="wtf-K1-I9x" id="Ymy-0N-xLc"/>
                     </connections>
