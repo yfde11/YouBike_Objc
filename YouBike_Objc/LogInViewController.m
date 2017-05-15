@@ -8,6 +8,8 @@
 
 #import "LogInViewController.h"
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKAccessToken.h>
+#import <FBSDKGraphRequest.h>
 #import "TabbarViewController.h"
 
 @interface LogInViewController ()
@@ -49,8 +51,58 @@
              UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
              UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"tabbarView"];
              [self presentViewController:vc animated:true completion:nil];
-             
+             NSLog(@"%@", FBSDKAccessToken.currentAccessToken.tokenString);
+
+             [self getFacebookProfileInfos];
          }
      }];
+}
+
+-(void)getFacebookProfileInfos {
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionary];
+    [parameters setValue:@"id,first_name,email,link,last_name" forKey:@"fields"];
+
+
+    FBSDKGraphRequest *requestMe = [[FBSDKGraphRequest alloc]initWithGraphPath:@"me" parameters:parameters];
+
+    FBSDKGraphRequestConnection *connection = [[FBSDKGraphRequestConnection alloc] init];
+
+    [connection addRequest:requestMe completionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+
+        if(result)
+        {
+
+            if ([result objectForKey:@"first_name"]) {
+
+                NSLog(@"First Name : %@",[result objectForKey:@"first_name"]);
+                [[NSUserDefaults standardUserDefaults] setObject:[result objectForKey:@"first_name"] forKey:@"firstName"];
+
+            }if ([result objectForKey:@"last_name"]) {
+
+                NSLog(@"Last Name : %@",[result objectForKey:@"last_name"]);
+                [[NSUserDefaults standardUserDefaults] setObject:[result objectForKey:@"last_name"] forKey:@"lastName"];
+            }
+            if ([result objectForKey:@"id"]) {
+                
+                NSLog(@"User id : %@",[result objectForKey:@"id"]);
+                [[NSUserDefaults standardUserDefaults] setObject:[result objectForKey:@"id"] forKey:@"id"];
+
+            }if ([result objectForKey:@"link"]) {
+
+                NSLog(@"User link : %@",[result objectForKey:@"link"]);
+                [[NSUserDefaults standardUserDefaults] setObject:[result objectForKey:@"link"] forKey:@"link"];
+
+            }if ([result objectForKey:@"email"]) {
+
+                NSLog(@"Email: %@",[result objectForKey:@"email"]);
+                [[NSUserDefaults standardUserDefaults] setObject:[result objectForKey:@"email"] forKey:@"email"];
+                
+            }
+
+        }
+        
+    }];
+    
+    [connection start];
 }
 @end
