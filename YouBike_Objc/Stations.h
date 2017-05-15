@@ -12,13 +12,11 @@
 @interface Stations : NSObject
 
 @property NSString *name;
-
 @property NSString *id;
-
 @property NSString *address;
-
 @property NSNumber *numberOfRemainingBikes;
-
 @property CLLocationCoordinate2D *coordinate;
+
+
 
 @end

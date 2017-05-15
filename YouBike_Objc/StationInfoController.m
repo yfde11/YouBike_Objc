@@ -21,6 +21,10 @@
 
 @implementation StationInfoController
 
+@synthesize listSwitch;
+@synthesize stationsCollectionView;
+@synthesize stationsTableView;
+
 - (void)viewDidLoad {
 
     [super viewDidLoad];
@@ -34,7 +38,7 @@
 
     self.stationsTableView.delegate = self;
     self.stationsTableView.dataSource = self;
-    [_stationsTableView registerNib: [UINib nibWithNibName: @"StationsTableViewCell" bundle:nil]
+    [stationsTableView registerNib: [UINib nibWithNibName: @"StationsTableViewCell" bundle:nil]
              forCellReuseIdentifier: @"StationsTableViewCell"];
 
 }
@@ -62,6 +66,28 @@
     return tableViewCell;
 }
 
+- (IBAction)switchList:(UISegmentedControl *)sender {
+
+    switch (listSwitch.selectedSegmentIndex) {
+
+        case 0:
+
+            stationsTableView.hidden = NO;
+            stationsCollectionView.hidden = YES;
+
+            break;
+
+        case 1:
+
+            stationsTableView.hidden = YES;
+            stationsCollectionView.hidden = NO;
+
+        default:
+
+            break;
+
+    }
+}
 @end
 
 

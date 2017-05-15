@@ -67,11 +67,14 @@
                                     <segment title="First"/>
                                     <segment title="Second"/>
                                 </segments>
+                                <connections>
+                                    <action selector="switchList:" destination="PQm-gN-cQi" eventType="valueChanged" id="zUA-Tn-xli"/>
+                                </connections>
                             </segmentedControl>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="listSwitch" destination="Q81-EV-4SF" id="AVM-F4-JzQ"/>
+                        <outlet property="listSwitch" destination="OWD-73-7O7" id="fFm-8K-G2Z"/>
                         <outlet property="stationsCollectionView" destination="YtO-Kz-AXa" id="fbs-Lc-GGN"/>
                         <outlet property="stationsTableView" destination="wtf-K1-I9x" id="Ymy-0N-xLc"/>
                     </connections>
