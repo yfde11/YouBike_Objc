@@ -9,6 +9,7 @@
 #import "MapViewController.h"
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "MapViewController.h"
 
 @interface MapViewController () <CLLocationManagerDelegate> {
     CLLocationManager *objLocationManager;
@@ -20,11 +21,12 @@
 
 
 
+
 @end
 
 @implementation MapViewController
 
-@synthesize mapSegment;
+@synthesize segment;
 @synthesize mapView;
 
 - (void)viewDidLoad {
@@ -32,20 +34,13 @@
     
     
     
-    [mapSegment addTarget:self action:@selector(changeMapType) forControlEvents:UIControlEventTouchUpInside];
+;
     
     [self changeMapType];
    }
 
 -(void) changeMapType {
-    NSLog(@"%ld", (long)mapSegment.selectedSegmentIndex);
-    if (mapSegment.selectedSegmentIndex == 0) {
-        [mapView setMapType: MKMapTypeStandard];
-    } else if (mapSegment.selectedSegmentIndex == 1) {
-        [mapView setMapType: MKMapTypeSatellite];
-    } else if (mapSegment.selectedSegmentIndex == 2) {
-        [mapView setMapType: MKMapTypeHybrid];
-    }
+
 
 }
 
@@ -54,14 +49,55 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) loadUserLocation
+{
+    objLocationManager = [[CLLocationManager alloc] init];
+    objLocationManager.delegate = self;
+    objLocationManager.distanceFilter = kCLDistanceFilterNone;
+    objLocationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+    if ([objLocationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [objLocationManager requestWhenInUseAuthorization];
+    }
+    [objLocationManager startUpdatingLocation];
 }
-*/
+
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(nonnull NSArray<CLLocation *> *)locations; {
+    CLLocation *newLocation = [locations objectAtIndex:0];
+    latitude_UserLocation = newLocation.coordinate.latitude;
+    longitude_UserLocation = newLocation.coordinate.longitude;
+    [objLocationManager stopUpdatingLocation];
+    [self loadMapView];
+}
+
+- (void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    [objLocationManager stopUpdatingLocation];
+}
+
+- (void) loadMapView {
+    
+    
+    
+        
+    
+    MKCoordinateSpan objCoorSpan = {
+        
+    };
+}
+- (IBAction)mapSegment:(id)sender {
+    switch (segment.selectedSegmentIndex) {
+        case 0:
+            [mapView setMapType:MKMapTypeStandard];
+            break;
+        case 1:
+            [mapView setMapType:MKMapTypeSatellite];
+            break;
+        case 2:
+            [mapView setMapType:MKMapTypeHybrid];
+            break;
+        default:
+            break;
+    }
+}
 
 @end

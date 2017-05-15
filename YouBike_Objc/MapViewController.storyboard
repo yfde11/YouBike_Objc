@@ -38,6 +38,9 @@
                                             <segment title="Hybrid"/>
                                         </segments>
                                         <color key="tintColor" red="0.98431372549019602" green="0.77254901960784317" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="mapSegment:" destination="Ifg-aK-pOg" eventType="valueChanged" id="Apl-GM-nr0"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,8 +64,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapSegment" destination="yxQ-r6-Sv8" id="iQ0-bP-pt4"/>
                         <outlet property="mapView" destination="buj-ne-dnt" id="0yl-z9-tG2"/>
+                        <outlet property="segment" destination="yxQ-r6-Sv8" id="1fr-8T-epB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2e-SS-cUW" userLabel="First Responder" sceneMemberID="firstResponder"/>
