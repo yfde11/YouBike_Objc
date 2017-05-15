@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "StationInfoController.h"
-#import "Station.h"
+
 
 @interface StationInfoController () <UITableViewDelegate, UITableViewDataSource>
 

@@ -14,18 +14,22 @@
 {
     NSArray *componetsArray;
 }
-enum Componets {
+typedef enum {
     map,
     station,
-    comment
-} ;
-    
+    comment,
+    Null
+} Componets;
+
+
     @property (strong, nonatomic) NSString *identifier;
+
+
 @end
 
 @implementation MapTableViewController{
     
-//    NSString *identifier;
+    
 }
 
 
@@ -35,7 +39,9 @@ enum Componets {
     _identifier = [NSString new];
     _identifier = @"CommentTableViewCell";
     
-    componetsArray = [[NSArray alloc] initWithObjects: @"a", @"sss", @"ddCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCelld", nil];
+    Componets* componentsArray = [NSArray arrayWithObjects:[NSNumber numberWithInteger:map], [NSNumber numberWithInteger:station], [NSNumber numberWithInteger:comment] nil];
+    
+//    componetsArray = [[NSArray alloc] initWithObjects: @"a", @"sss", @"ddCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCelld", nil];
     
     UINib *cellNib = [UINib nibWithNibName:_identifier bundle:nil];
     
@@ -54,7 +60,7 @@ enum Componets {
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 1;
+    return componetsArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
