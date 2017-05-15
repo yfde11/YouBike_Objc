@@ -11,6 +11,7 @@
 #import <FBSDKAccessToken.h>
 #import <FBSDKGraphRequest.h>
 #import "TabbarViewController.h"
+#import "YoubikeManager.h"
 
 @interface LogInViewController ()
 
@@ -54,6 +55,7 @@
              NSLog(@"%@", FBSDKAccessToken.currentAccessToken.tokenString);
 
              [self getFacebookProfileInfos];
+             [YoubikeManager.shared getToken];
          }
      }];
 }
