@@ -27,6 +27,8 @@
 		7BD2AB061EC95D68006811BE /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD2AB051EC95D68006811BE /* MapViewController.m */; };
 		7BD2AB081EC95D80006811BE /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD2AB071EC95D80006811BE /* MapViewController.storyboard */; };
 		7BD2AB0B1EC95E15006811BE /* CommentMobel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD2AB0A1EC95E15006811BE /* CommentMobel.m */; };
+		7BD2AB0F1EC98E27006811BE /* StationsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD2AB0D1EC98E27006811BE /* StationsCollectionViewCell.m */; };
+		7BD2AB101EC98E27006811BE /* StationsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD2AB0E1EC98E27006811BE /* StationsCollectionViewCell.xib */; };
 		9B8AF6021EC1624400AEE0A8 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8AF6011EC1624400AEE0A8 /* LogInViewController.m */; };
 		9B8AF6051EC1663600AEE0A8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8AF6041EC1663600AEE0A8 /* Login.storyboard */; };
 		9B8AF6081EC19E5400AEE0A8 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8AF6071EC19E5400AEE0A8 /* ProfileViewController.m */; };
@@ -72,6 +74,9 @@
 		7BD2AB071EC95D80006811BE /* MapViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
 		7BD2AB091EC95E15006811BE /* CommentMobel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentMobel.h; sourceTree = "<group>"; };
 		7BD2AB0A1EC95E15006811BE /* CommentMobel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentMobel.m; sourceTree = "<group>"; };
+		7BD2AB0C1EC98E27006811BE /* StationsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationsCollectionViewCell.h; sourceTree = "<group>"; };
+		7BD2AB0D1EC98E27006811BE /* StationsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsCollectionViewCell.m; sourceTree = "<group>"; };
+		7BD2AB0E1EC98E27006811BE /* StationsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StationsCollectionViewCell.xib; sourceTree = "<group>"; };
 		923A3DEAC363EAFF168D06B3 /* libPods-YouBike_Objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YouBike_Objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B8AF6001EC1624400AEE0A8 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		9B8AF6011EC1624400AEE0A8 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
@@ -137,6 +142,9 @@
 				7B1880691EC59D3E001F5632 /* StationsTableViewCell.m */,
 				7B18806A1EC59D3E001F5632 /* StationsTableViewCell.xib */,
 				7B81587F1EC5867200297408 /* StationInfoController.storyboard */,
+				7BD2AB0C1EC98E27006811BE /* StationsCollectionViewCell.h */,
+				7BD2AB0D1EC98E27006811BE /* StationsCollectionViewCell.m */,
+				7BD2AB0E1EC98E27006811BE /* StationsCollectionViewCell.xib */,
 			);
 			name = StationInfoController;
 			sourceTree = "<group>";
@@ -314,6 +322,7 @@
 				7B18807D1EC6B89C001F5632 /* MapView.storyboard in Resources */,
 				7B1880791EC6B89C001F5632 /* CommentTableViewCell.xib in Resources */,
 				7BD2AB081EC95D80006811BE /* MapViewController.storyboard in Resources */,
+				7BD2AB101EC98E27006811BE /* StationsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +384,7 @@
 				7B18807C1EC6B89C001F5632 /* MapTableViewController.m in Sources */,
 				7B18806B1EC59D3E001F5632 /* StationsTableViewCell.m in Sources */,
 				7B18807A1EC6B89C001F5632 /* MapTableViewCell.m in Sources */,
+				7BD2AB0F1EC98E27006811BE /* StationsCollectionViewCell.m in Sources */,
 				9B8AF6111EC1A50700AEE0A8 /* TabbarViewController.m in Sources */,
 				7BAD9BED1EC151AF006DB809 /* AppDelegate.m in Sources */,
 				7B1880781EC6B89C001F5632 /* CommentTableViewCell.m in Sources */,
