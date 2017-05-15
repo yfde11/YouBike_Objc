@@ -7,14 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B18806B1EC59D3E001F5632 /* StationsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1880691EC59D3E001F5632 /* StationsTableViewCell.m */; };
+		7B18806C1EC59D3E001F5632 /* StationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B18806A1EC59D3E001F5632 /* StationsTableViewCell.xib */; };
+		7B1880781EC6B89C001F5632 /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1880701EC6B89C001F5632 /* CommentTableViewCell.m */; };
+		7B1880791EC6B89C001F5632 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B1880711EC6B89C001F5632 /* CommentTableViewCell.xib */; };
+		7B18807A1EC6B89C001F5632 /* MapTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1880731EC6B89C001F5632 /* MapTableViewCell.m */; };
+		7B18807B1EC6B89C001F5632 /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B1880741EC6B89C001F5632 /* MapTableViewCell.xib */; };
+		7B18807C1EC6B89C001F5632 /* MapTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1880761EC6B89C001F5632 /* MapTableViewController.m */; };
+		7B18807D1EC6B89C001F5632 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1880771EC6B89C001F5632 /* MapView.storyboard */; };
+		7B81587E1EC5844100297408 /* StationInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B81587D1EC5844100297408 /* StationInfoController.m */; };
+		7B8158801EC5867200297408 /* StationInfoController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B81587F1EC5867200297408 /* StationInfoController.storyboard */; };
 		7BAD9BEA1EC151AF006DB809 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAD9BE91EC151AF006DB809 /* main.m */; };
 		7BAD9BED1EC151AF006DB809 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAD9BEC1EC151AF006DB809 /* AppDelegate.m */; };
 		7BAD9BF51EC151AF006DB809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BAD9BF41EC151AF006DB809 /* Assets.xcassets */; };
 		7BAD9BF81EC151AF006DB809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAD9BF61EC151AF006DB809 /* LaunchScreen.storyboard */; };
-
-		7BAD9C061EC1883D006DB809 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BAD9C051EC1883D006DB809 /* Default-568h@2x.png */; };
 		7BAD9C121EC1BD19006DB809 /* YoubikeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAD9C111EC1BD19006DB809 /* YoubikeManager.m */; };
 		7BAD9C141EC1CB6F006DB809 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BAD9C131EC1CB6F006DB809 /* libAFNetworking.a */; };
+		7BD2AB011EC6D612006811BE /* Stations.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD2AB001EC6D612006811BE /* Stations.m */; };
+		7BD2AB061EC95D68006811BE /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD2AB051EC95D68006811BE /* MapViewController.m */; };
+		7BD2AB081EC95D80006811BE /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD2AB071EC95D80006811BE /* MapViewController.storyboard */; };
+		7BD2AB0B1EC95E15006811BE /* CommentMobel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD2AB0A1EC95E15006811BE /* CommentMobel.m */; };
+		7BD2AB0F1EC98E27006811BE /* StationsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD2AB0D1EC98E27006811BE /* StationsCollectionViewCell.m */; };
+		7BD2AB101EC98E27006811BE /* StationsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD2AB0E1EC98E27006811BE /* StationsCollectionViewCell.xib */; };
 		9B8AF6021EC1624400AEE0A8 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8AF6011EC1624400AEE0A8 /* LogInViewController.m */; };
 		9B8AF6051EC1663600AEE0A8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B8AF6041EC1663600AEE0A8 /* Login.storyboard */; };
 		9B8AF6081EC19E5400AEE0A8 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8AF6071EC19E5400AEE0A8 /* ProfileViewController.m */; };
@@ -27,6 +41,21 @@
 
 /* Begin PBXFileReference section */
 		58BD20D4EF183D6E6FF36015 /* Pods-YouBike_Objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouBike_Objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YouBike_Objc/Pods-YouBike_Objc.debug.xcconfig"; sourceTree = "<group>"; };
+		7B1880681EC59D3E001F5632 /* StationsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationsTableViewCell.h; sourceTree = "<group>"; };
+		7B1880691EC59D3E001F5632 /* StationsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsTableViewCell.m; sourceTree = "<group>"; };
+		7B18806A1EC59D3E001F5632 /* StationsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StationsTableViewCell.xib; sourceTree = "<group>"; };
+		7B18806F1EC6B89C001F5632 /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		7B1880701EC6B89C001F5632 /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
+		7B1880711EC6B89C001F5632 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		7B1880721EC6B89C001F5632 /* MapTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTableViewCell.h; sourceTree = "<group>"; };
+		7B1880731EC6B89C001F5632 /* MapTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTableViewCell.m; sourceTree = "<group>"; };
+		7B1880741EC6B89C001F5632 /* MapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
+		7B1880751EC6B89C001F5632 /* MapTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTableViewController.h; sourceTree = "<group>"; };
+		7B1880761EC6B89C001F5632 /* MapTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTableViewController.m; sourceTree = "<group>"; };
+		7B1880771EC6B89C001F5632 /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
+		7B81587C1EC5844100297408 /* StationInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationInfoController.h; sourceTree = "<group>"; };
+		7B81587D1EC5844100297408 /* StationInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationInfoController.m; sourceTree = "<group>"; };
+		7B81587F1EC5867200297408 /* StationInfoController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StationInfoController.storyboard; sourceTree = "<group>"; };
 		7BAD9BE51EC151AF006DB809 /* YouBike_Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBike_Objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BAD9BE91EC151AF006DB809 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7BAD9BEB1EC151AF006DB809 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,10 +64,19 @@
 		7BAD9BF71EC151AF006DB809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BAD9BF91EC151AF006DB809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BAD9C051EC1883D006DB809 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		7BAD9C081EC1A19E006DB809 /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
 		7BAD9C101EC1BD19006DB809 /* YoubikeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoubikeManager.h; sourceTree = "<group>"; };
 		7BAD9C111EC1BD19006DB809 /* YoubikeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoubikeManager.m; sourceTree = "<group>"; };
 		7BAD9C131EC1CB6F006DB809 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "../../../Library/Developer/Xcode/DerivedData/YouBike_Objc-ccqhmvmryeoofxfhptrnxujtdxic/Build/Products/Debug-iphonesimulator/AFNetworking/libAFNetworking.a"; sourceTree = "<group>"; };
+		7BD2AAFF1EC6D612006811BE /* Stations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stations.h; sourceTree = "<group>"; };
+		7BD2AB001EC6D612006811BE /* Stations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stations.m; sourceTree = "<group>"; };
+		7BD2AB041EC95D68006811BE /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		7BD2AB051EC95D68006811BE /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		7BD2AB071EC95D80006811BE /* MapViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
+		7BD2AB091EC95E15006811BE /* CommentMobel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentMobel.h; sourceTree = "<group>"; };
+		7BD2AB0A1EC95E15006811BE /* CommentMobel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentMobel.m; sourceTree = "<group>"; };
+		7BD2AB0C1EC98E27006811BE /* StationsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationsCollectionViewCell.h; sourceTree = "<group>"; };
+		7BD2AB0D1EC98E27006811BE /* StationsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsCollectionViewCell.m; sourceTree = "<group>"; };
+		7BD2AB0E1EC98E27006811BE /* StationsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StationsCollectionViewCell.xib; sourceTree = "<group>"; };
 		923A3DEAC363EAFF168D06B3 /* libPods-YouBike_Objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YouBike_Objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B8AF6001EC1624400AEE0A8 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		9B8AF6011EC1624400AEE0A8 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
@@ -76,6 +114,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7B18807E1EC6B8B3001F5632 /* MapTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7B18806F1EC6B89C001F5632 /* CommentTableViewCell.h */,
+				7B1880701EC6B89C001F5632 /* CommentTableViewCell.m */,
+				7B1880711EC6B89C001F5632 /* CommentTableViewCell.xib */,
+				7B1880721EC6B89C001F5632 /* MapTableViewCell.h */,
+				7B1880731EC6B89C001F5632 /* MapTableViewCell.m */,
+				7B1880741EC6B89C001F5632 /* MapTableViewCell.xib */,
+				7B1880751EC6B89C001F5632 /* MapTableViewController.h */,
+				7BD2AB041EC95D68006811BE /* MapViewController.h */,
+				7BD2AB051EC95D68006811BE /* MapViewController.m */,
+				7B1880761EC6B89C001F5632 /* MapTableViewController.m */,
+				7BD2AB071EC95D80006811BE /* MapViewController.storyboard */,
+				7B1880771EC6B89C001F5632 /* MapView.storyboard */,
+			);
+			name = MapTableViewController;
+			sourceTree = "<group>";
+		};
+		7B81587B1EC5832400297408 /* StationInfoController */ = {
+			isa = PBXGroup;
+			children = (
+				7B81587C1EC5844100297408 /* StationInfoController.h */,
+				7B81587D1EC5844100297408 /* StationInfoController.m */,
+				7B1880681EC59D3E001F5632 /* StationsTableViewCell.h */,
+				7B1880691EC59D3E001F5632 /* StationsTableViewCell.m */,
+				7B18806A1EC59D3E001F5632 /* StationsTableViewCell.xib */,
+				7B81587F1EC5867200297408 /* StationInfoController.storyboard */,
+				7BD2AB0C1EC98E27006811BE /* StationsCollectionViewCell.h */,
+				7BD2AB0D1EC98E27006811BE /* StationsCollectionViewCell.m */,
+				7BD2AB0E1EC98E27006811BE /* StationsCollectionViewCell.xib */,
+			);
+			name = StationInfoController;
+			sourceTree = "<group>";
+		};
 		7BAD9BDC1EC151AF006DB809 = {
 			isa = PBXGroup;
 			children = (
@@ -98,16 +171,18 @@
 		7BAD9BE71EC151AF006DB809 /* YouBike_Objc */ = {
 			isa = PBXGroup;
 			children = (
-				7BAD9BEB1EC151AF006DB809 /* AppDelegate.h */,
-				7BAD9BEC1EC151AF006DB809 /* AppDelegate.m */,
-				7BAD9BF41EC151AF006DB809 /* Assets.xcassets */,
-				7BAD9C071EC19E9E006DB809 /* Model */,
-				7BAD9BF61EC151AF006DB809 /* LaunchScreen.storyboard */,
-				7BAD9BF91EC151AF006DB809 /* Info.plist */,
-				7BAD9BE81EC151AF006DB809 /* Supporting Files */,
+				7B81587B1EC5832400297408 /* StationInfoController */,
+				7B18807E1EC6B8B3001F5632 /* MapTableViewController */,
 				9B8AF6031EC1624C00AEE0A8 /* Login */,
 				9B8AF6091EC19E5E00AEE0A8 /* Profile */,
 				9B8AF60E1EC1A40900AEE0A8 /* Tabbar */,
+				7BAD9C071EC19E9E006DB809 /* Model */,
+				7BAD9BE81EC151AF006DB809 /* Supporting Files */,
+				7BAD9BEB1EC151AF006DB809 /* AppDelegate.h */,
+				7BAD9BEC1EC151AF006DB809 /* AppDelegate.m */,
+				7BAD9BF41EC151AF006DB809 /* Assets.xcassets */,
+				7BAD9BF61EC151AF006DB809 /* LaunchScreen.storyboard */,
+				7BAD9BF91EC151AF006DB809 /* Info.plist */,
 			);
 			path = YouBike_Objc;
 			sourceTree = "<group>";
@@ -123,7 +198,10 @@
 		7BAD9C071EC19E9E006DB809 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7BAD9C081EC1A19E006DB809 /* Station.h */,
+				7BD2AAFF1EC6D612006811BE /* Stations.h */,
+				7BD2AB001EC6D612006811BE /* Stations.m */,
+				7BD2AB091EC95E15006811BE /* CommentMobel.h */,
+				7BD2AB0A1EC95E15006811BE /* CommentMobel.m */,
 				7BAD9C101EC1BD19006DB809 /* YoubikeManager.h */,
 				7BAD9C111EC1BD19006DB809 /* YoubikeManager.m */,
 			);
@@ -235,9 +313,16 @@
 			files = (
 				9B8AF60B1EC1A1E100AEE0A8 /* Tabbar.storyboard in Resources */,
 				7BAD9BF81EC151AF006DB809 /* LaunchScreen.storyboard in Resources */,
+				7B18806C1EC59D3E001F5632 /* StationsTableViewCell.xib in Resources */,
 				9B8AF60D1EC1A20400AEE0A8 /* Profile.storyboard in Resources */,
 				7BAD9BF51EC151AF006DB809 /* Assets.xcassets in Resources */,
+				7B8158801EC5867200297408 /* StationInfoController.storyboard in Resources */,
 				9B8AF6051EC1663600AEE0A8 /* Login.storyboard in Resources */,
+				7B18807B1EC6B89C001F5632 /* MapTableViewCell.xib in Resources */,
+				7B18807D1EC6B89C001F5632 /* MapView.storyboard in Resources */,
+				7B1880791EC6B89C001F5632 /* CommentTableViewCell.xib in Resources */,
+				7BD2AB081EC95D80006811BE /* MapViewController.storyboard in Resources */,
+				7BD2AB101EC98E27006811BE /* StationsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,13 +381,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B18807C1EC6B89C001F5632 /* MapTableViewController.m in Sources */,
+				7B18806B1EC59D3E001F5632 /* StationsTableViewCell.m in Sources */,
+				7B18807A1EC6B89C001F5632 /* MapTableViewCell.m in Sources */,
+				7BD2AB0F1EC98E27006811BE /* StationsCollectionViewCell.m in Sources */,
 				9B8AF6111EC1A50700AEE0A8 /* TabbarViewController.m in Sources */,
 				7BAD9BED1EC151AF006DB809 /* AppDelegate.m in Sources */,
+				7B1880781EC6B89C001F5632 /* CommentTableViewCell.m in Sources */,
+				7B81587E1EC5844100297408 /* StationInfoController.m in Sources */,
+				7BD2AB011EC6D612006811BE /* Stations.m in Sources */,
 				7BAD9BEA1EC151AF006DB809 /* main.m in Sources */,
 				7BAD9C121EC1BD19006DB809 /* YoubikeManager.m in Sources */,
 				9B8AF6081EC19E5400AEE0A8 /* ProfileViewController.m in Sources */,
+				7BD2AB0B1EC95E15006811BE /* CommentMobel.m in Sources */,
 				9B8AF6501EC5626700AEE0A8 /* ProfileNavgationViewController.m in Sources */,
 				9B8AF6021EC1624400AEE0A8 /* LogInViewController.m in Sources */,
+				7BD2AB061EC95D68006811BE /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +439,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -366,6 +461,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -394,6 +490,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -409,6 +506,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -422,6 +520,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YouBike-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -435,6 +534,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.YouBike-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};

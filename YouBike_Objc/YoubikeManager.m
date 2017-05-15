@@ -25,7 +25,7 @@
     return instance;
 }
 
--(void) getStations:(void (^)(Station *, NSError *))block
+-(void) getStations:(void (^)(Stations *, NSError *))block
 {
 
     NSString *url = [NSString stringWithFormat: @"setUrl"];
@@ -45,6 +45,8 @@
 
         } else {
 
+            Stations *stations = [Stations new];
+            [stations address];
             // Unbox JSON
         }
         
