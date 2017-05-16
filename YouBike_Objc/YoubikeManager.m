@@ -32,6 +32,7 @@
 
     NSString *url = [NSString stringWithFormat: @"setUrl"];
     NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"token"];
+    NSString *requestString = [NSString stringWithFormat:@"%@%@"];
 
     [self.requestSerializer setValue: token forHTTPHeaderField: @"Authorization"];
 
@@ -50,6 +51,9 @@
             Stations *stations = [Stations new];
             [stations address];
             // Unbox JSON
+            //for loop 存station進去stations array
+
+            block(stations, nil);
         }
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -85,7 +89,9 @@
                                                         NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
                                                         NSDictionary *dataObject = jsonObject[@"data"];
                                                         [[NSUserDefaults standardUserDefaults] setObject:dataObject[@"token"] forKey:@"token"];
+                                                        NSLog(@"%@", dataObject[@"token"]);
                                                         [[NSUserDefaults standardUserDefaults] setObject:dataObject[@"tokenType"] forKey:@"tokenType"];
+                                                        NSLog(@"%@", dataObject[@"tokenType"]);
                                                     }
                                                 }];
     [dataTask resume];
