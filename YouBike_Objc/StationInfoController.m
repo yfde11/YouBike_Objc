@@ -12,7 +12,9 @@
 #import "StationInfoController.h"
 #import "Stations.h"
 
+
 @interface StationInfoController () <UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource>
+
 
 {
     NSArray<Stations *> *stationsArray;

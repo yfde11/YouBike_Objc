@@ -10,22 +10,26 @@
 #import "MapTableViewCell.h"
 #import "CommentTableViewCell.h"
 
+ enum Componets{
+    map ,
+    station,
+    comment,
+} ;
+
 @interface MapTableViewController ()
 {
-    NSArray *componetsArray;
-}
-enum Componets {
-    map,
-    station,
-    comment
-} ;
+    NSArray *componentsArray;
     
+}
+
     @property (strong, nonatomic) NSString *identifier;
+
+
 @end
 
 @implementation MapTableViewController{
     
-//    NSString *identifier;
+    
 }
 
 
@@ -35,7 +39,8 @@ enum Componets {
     _identifier = [NSString new];
     _identifier = @"CommentTableViewCell";
     
-    componetsArray = [[NSArray alloc] initWithObjects: @"a", @"sss", nil];
+     componentsArray = [[NSArray alloc] initWithObjects: map, station, comment, nil];
+//    componetsArray = [[NSArray alloc] initWithObjects: @"a", @"sss", @"ddCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCellCommentTableViewCelld", nil];
     
     UINib *cellNib = [UINib nibWithNibName:_identifier bundle:nil];
     
@@ -54,35 +59,40 @@ enum Componets {
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
-    return 1;
+    return componentsArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
-    return componetsArray.count;
+    
+    switch (0) {
+        case 1:
+        case 2:
+            return 1;
+            break;
+        case 3:
+            return 3;
+        default:
+            break;
+    }
+    return componentsArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"%@", self.identifier);
-//    CommentTableViewCell *commentCell = [tableView dequeueReusableCellWithIdentifier:_identifier forIndexPath:indexPath];
-//    CommentTableViewCell *commentCell = [tableView dequeueReusableCellWithIdentifier:@"CommentTableViewCell"];
-//    if (commentCell == nil) {
-//        [tableView registerNib:[UINib nibWithNibName:@"CommentTableViewCell" bundle:nil] forCellReuseIdentifier:@"CommentTableViewCell"];
-//    }
-//    commentCell.comment = componetsArray[indexPath.row];
+
     
-    UITableViewCell *commentCell = [tableView dequeueReusableCellWithIdentifier:_identifier forIndexPath:indexPath];
+    CommentTableViewCell *commentCell = [tableView dequeueReusableCellWithIdentifier:_identifier forIndexPath:indexPath];
     
-    
+    commentCell.comment.text = componentsArray[indexPath.row];
     return commentCell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGSize constrain = CGSizeMake(375, CGFLOAT_MAX);
-    CGSize boundingBox = [[componetsArray objectAtIndex:indexPath.row] boundingRectWithSize:constrain options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17.0]} context:nil].size;
-    
+    CGSize boundingBox = [[componentsArray objectAtIndex:indexPath.row] boundingRectWithSize:constrain options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17.0]} context:nil].size;
+  
     
     if (ceil(boundingBox.height) < 100) {
         return 100;

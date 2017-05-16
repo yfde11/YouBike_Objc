@@ -10,11 +10,14 @@
 #import <AFNetworking.h>
 #import "Stations.h"
 
+
 @interface YoubikeManager : AFHTTPSessionManager
 
 + (instancetype) shared;
 
+
 - (void) getStations: (void (^) (Stations *stationsFromAPI, NSError *error))block;
 - (void) getToken;
+
 
 @end
