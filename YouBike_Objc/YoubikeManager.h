@@ -15,5 +15,6 @@
 + (instancetype) shared;
 
 - (void) getStations: (void (^) (Stations *stationsFromAPI, NSError *error))block;
+- (void) getToken;
 
 @end
