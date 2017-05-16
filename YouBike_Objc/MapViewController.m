@@ -16,7 +16,7 @@
     double latitude_UserLocation, longitude_UserLocation;
 
     NSArray* routes;
-    BOOL isUpfatingRoutes;
+    BOOL isUpdatingRoutes;
     
 }
 
@@ -36,10 +36,17 @@
     
     [self loadUserLocation];
     [self getDirections];
+    
    }
 
+
 -(void)getDirections {
-    CLLocationCoordinate2D sourceCoords = CLLocationCoordinate2DMake(latitude_UserLocation, longitude_UserLocation);
+    MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
+    request.source = [MKMapItem mapItemForCurrentLocation];
+    request.destination = _destination;
+    request.requestsAlternateRoutes = NO;
+    
+   /* CLLocationCoordinate2D sourceCoords = CLLocationCoordinate2DMake(latitude_UserLocation, longitude_UserLocation);
     //shown area
     MKCoordinateSpan span;
     span.latitudeDelta = 0.2;
@@ -53,6 +60,15 @@
     region.span = span;
     region.center = location2D;
     [mapView setRegion:region animated:true];
+    */
+    CLLocationCoordinate2D sourceCoords = CLLocationCoordinate2DMake(25.135915, 121.664099);
+    MKCoordinateRegion region;
+    MKCoordinateSpan span;
+    region.center = sourceCoords;
+    span.latitudeDelta = 1;
+    span.longitudeDelta = 1;
+    region.span = span;
+    [mapView setRegion:region animated:TRUE];
     
     MKPlacemark *placeMark = [[MKPlacemark alloc] initWithCoordinate:sourceCoords addressDictionary:nil];
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
@@ -60,29 +76,32 @@
     annotation.title = @"title";
     [self.mapView addAnnotation:annotation];
     
-    _destination = placeMark;
+    self.destination = placeMark;
+    
     
     MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:_destination];
-    CLLocationCoordinate2D destCoords = CLLocationCoordinate2DMake(24.615223, 122.389977);
+    CLLocationCoordinate2D destCoords = CLLocationCoordinate2DMake(25.035915, 121.564099);
     MKPlacemark *placeMark1 = [[MKPlacemark alloc] initWithCoordinate:destCoords addressDictionary:nil];
     
     MKPointAnnotation *annotation1 = [[MKPointAnnotation alloc] init];
     annotation1.coordinate = destCoords;
-    annotation1.title = @"San Francisco University";
+    annotation1.title = @"title2";
     [self.mapView addAnnotation:annotation1];
     
-    _source = placeMark1;
+    self.source = placeMark1;
+    //_source = placeMark1;
     
     MKMapItem *mapItem1 = [[MKMapItem alloc] initWithPlacemark:_source];
     
-    MKDirectionsRequest *request = [[MKDirectionsRequest alloc] init];
+    
     request.source = mapItem1;
     
-    request.destination = mapItem;
-    request.requestsAlternateRoutes = NO;
+    
     
     MKDirections *directions = [[MKDirections alloc] initWithRequest:request];
     [directions calculateETAWithCompletionHandler:^(MKETAResponse * _Nullable response, NSError * _Nullable error) {
+        
+        
         if (error) {
             NSLog(@"ERROR");
             NSLog(@"%@", [error localizedDescription]);
@@ -90,6 +109,7 @@
             [self showRoute: response];
         }
     }];
+    
 }
 
 -(void)showRoute:(MKDirectionsResponse *)response {
@@ -133,14 +153,14 @@
     latitude_UserLocation = newLocation.coordinate.latitude;
     longitude_UserLocation = newLocation.coordinate.longitude;
     [objLocationManager stopUpdatingLocation];
-    [self loadMapView];
+    //[self loadMapView];
 }
 
 - (void) locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
     [objLocationManager stopUpdatingLocation];
 }
 
-- (void) loadMapView {
+/*- (void) loadMapView {
     
     //shown area
     MKCoordinateSpan span;
@@ -154,7 +174,7 @@
     MKCoordinateRegion region;
     region.span = span;
     region.center = location2D;
-}
+}*/
 - (IBAction)mapSegment:(id)sender {
     switch (segment.selectedSegmentIndex) {
         case 0:
