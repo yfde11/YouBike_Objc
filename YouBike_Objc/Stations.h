@@ -12,11 +12,13 @@
 @interface Stations : NSObject
 
 @property NSString *name;
-@property NSString *id;
+@property NSString *enName;
 @property NSString *address;
-@property NSNumber *numberOfRemainingBikes;
+@property NSString *enAddress;
+@property NSString *numberOfRemainingBikes;
+@property NSString *stationNumber;
 @property CLLocationCoordinate2D *coordinate;
 
-
+- (id)initWithName: (NSString *)name enName: (NSString *)enName address: (NSString *)address enaddress: (NSString *)enaddress numberOfRemainingBikes: (NSString *)numberOfReminingBikes stationNumber: (NSString *)stationNumber coordinate: (CLLocationCoordinate2D *)coordinate;
 
 @end

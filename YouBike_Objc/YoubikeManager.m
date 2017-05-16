@@ -7,6 +7,8 @@
 //
 
 #import "YoubikeManager.h"
+#import <Foundation/Foundation.h>
+#import <FBSDKAccessToken.h>
 
 @implementation YoubikeManager
 
@@ -96,6 +98,35 @@
         }
 
     }];
+}
+
+-(void) getToken {
+    NSDictionary *headers = @{ @"content-type": @"application/json" };
+    NSDictionary *parameters = @{ @"accessToken": FBSDKAccessToken.currentAccessToken.tokenString };
+
+    NSData *postData = [NSJSONSerialization dataWithJSONObject:parameters options:0 error:nil];
+
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://52.198.40.72/youbike/v1/sign-in/facebook"]
+                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                       timeoutInterval:10.0];
+    [request setHTTPMethod:@"POST"];
+    [request setAllHTTPHeaderFields:headers];
+    [request setHTTPBody:postData];
+
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
+                                                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                    if (error) {
+                                                        NSLog(@"%@", error);
+                                                    } else {
+//                                                        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+                                                        NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                                                        NSDictionary *dataObject = jsonObject[@"data"];
+                                                        [[NSUserDefaults standardUserDefaults] setObject:dataObject[@"token"] forKey:@"token"];
+                                                        [[NSUserDefaults standardUserDefaults] setObject:dataObject[@"tokenType"] forKey:@"tokenType"];
+                                                    }
+                                                }];
+    [dataTask resume];
 }
 
 

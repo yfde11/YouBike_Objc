@@ -61,9 +61,18 @@
                         <rect key="frame" x="20" y="137.5" width="46" height="30"/>
                         <state key="normal" title="Button"/>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JfM-bZ-wVB">
+                        <rect key="frame" x="0.0" y="181.5" width="647" height="2"/>
+                        <color key="backgroundColor" red="0.65098039215686276" green="0.56862745098039214" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="oR0-Cr-vda"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="25a-gb-KoQ" secondAttribute="trailing" constant="5" id="1CA-2c-j3f"/>
+                    <constraint firstAttribute="trailing" secondItem="JfM-bZ-wVB" secondAttribute="trailing" id="1wM-k4-XBA"/>
+                    <constraint firstAttribute="bottom" secondItem="JfM-bZ-wVB" secondAttribute="bottom" id="CGQ-eS-cne"/>
                     <constraint firstItem="rwz-A8-tev" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Dg9-Wd-cP7"/>
                     <constraint firstItem="IUO-7R-mVn" firstAttribute="leading" secondItem="uU6-Tg-czC" secondAttribute="trailing" constant="4" id="L6B-fT-jwS"/>
                     <constraint firstAttribute="bottom" secondItem="IUO-7R-mVn" secondAttribute="bottom" constant="14" id="TRV-4W-FA7"/>
@@ -75,6 +84,7 @@
                     <constraint firstAttribute="bottom" secondItem="uU6-Tg-czC" secondAttribute="bottom" constant="14" id="bCU-Tn-BSx"/>
                     <constraint firstItem="FAo-hZ-3Cd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="dGB-YK-vLu"/>
                     <constraint firstAttribute="trailing" secondItem="P0q-LX-30r" secondAttribute="trailing" constant="20" id="gC8-3m-Ke1"/>
+                    <constraint firstItem="JfM-bZ-wVB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gtu-AL-2JU"/>
                     <constraint firstItem="P0q-LX-30r" firstAttribute="leading" secondItem="IUO-7R-mVn" secondAttribute="trailing" constant="4" id="ltP-B4-lj8"/>
                     <constraint firstAttribute="bottom" secondItem="ZSg-iF-K6H" secondAttribute="bottom" constant="16" id="mba-EO-hao"/>
                     <constraint firstItem="rwz-A8-tev" firstAttribute="trailing" secondItem="uU6-Tg-czC" secondAttribute="trailing" id="nfZ-o7-5Yl"/>
