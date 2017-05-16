@@ -10,4 +10,6 @@
 
 @interface CommentMobel : NSObject
 
+@property NSString *name;
+
 @end
