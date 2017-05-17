@@ -56,6 +56,7 @@
 
              [self getFacebookProfileInfos];
              [YoubikeManager.shared getToken];
+             
          }
      }];
 }

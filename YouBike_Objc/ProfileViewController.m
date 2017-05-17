@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import "ProfileNavgationViewController.h"
+#import "YoubikeManager.h"
 @import SafariServices;
 
 @interface ProfileViewController ()
@@ -47,5 +48,8 @@
     SFSafariViewController *safariVC = [[SFSafariViewController alloc]initWithURL:[NSURL URLWithString:[[NSUserDefaults standardUserDefaults]stringForKey:@"link"]] entersReaderIfAvailable:NO];
     safariVC.delegate = self;
     [self presentViewController:safariVC animated:NO completion:nil];
+    [YoubikeManager.shared getStations:^(Stations *stationsFromAPI, NSError *error) {
+        NSLog(@"e04e040e04:  %@", stationsFromAPI);
+    }];
 }
 @end

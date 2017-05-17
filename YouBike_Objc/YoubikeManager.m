@@ -27,51 +27,15 @@
     return instance;
 }
 
-
-//-(void) getStations:(void (^)(Station *, NSError *))block
-//{
-//
-//    NSString *url = [NSString stringWithFormat: @"setUrl"];
-//    NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"token"];
-//
-//    [self.requestSerializer setValue: token forHTTPHeaderField: @"Authorization"];
-//
-//    [self GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-//
-//        NSLog(@"downloadProgress: %@", downloadProgress);
-//
-//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//
-//        if (task == nil) {
-//
-//            block(nil, responseObject);
-//
-//        } else {
-//
-//            Station *stations = [Station new];
-//            [stations address];
-//            // Unbox JSON
-//        }
-//        
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//
-//        if (block) {
-//
-//            block(nil, error);
-//
-//        }
-//
-//    }];
-//}
-
 -(void) getStations:(void (^)(Stations *, NSError *))block
 {
 
-    NSString *url = [NSString stringWithFormat: @"setUrl"];
+    NSString *url = [NSString stringWithFormat: @"http://52.198.40.72/youbike/v1/stations"];
     NSString *token = [[NSUserDefaults standardUserDefaults] objectForKey:@"token"];
-    NSString *requestString = [NSString stringWithFormat:@"%@%@"];
+    NSString *tokenType = [[NSUserDefaults standardUserDefaults] objectForKey:@"tokenType"];
+    NSString *requestString = [NSString stringWithFormat:@"%@ %@", tokenType, token];
 
-    [self.requestSerializer setValue: token forHTTPHeaderField: @"Authorization"];
+    [self.requestSerializer setValue: requestString forHTTPHeaderField: @"Authorization"];
 
     [self GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
 
@@ -79,20 +43,19 @@
 
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 
-        if (task == nil) {
+        // Unbox JSON
+        //for loop 存station進去stations array
+        //取得json內的資料
+        NSDictionary *jsonDict = (NSDictionary *) responseObject;
 
-            block(nil, responseObject);
+        NSArray *stationArray = [jsonDict objectForKey:@"data"];
 
-        } else {
-
-            Stations *stations = [Stations new];
-            [stations address];
-            // Unbox JSON
-            //for loop 存station進去stations array
-
-            block(stations, nil);
+        for (NSDictionary *stationDict in stationArray) {
+            NSLog(@"ar: %@", stationDict[@"ar"]);
         }
-        
+
+        block(task, nil);
+
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 
         if (block) {
