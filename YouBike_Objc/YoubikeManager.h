@@ -9,14 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking.h>
 #import "Stations.h"
+#import <CoreLocation/CoreLocation.h>
 
 
 @interface YoubikeManager : AFHTTPSessionManager
 
 + (instancetype) shared;
 
+@property NSMutableArray<Stations *> *stations;
 
-- (void) getStations: (void (^) (Stations *stationsFromAPI, NSError *error))block;
+- (void) getStations: (void (^) (NSMutableArray *stationsFromAPI, NSError *error))block;
 - (void) getToken;
 
 

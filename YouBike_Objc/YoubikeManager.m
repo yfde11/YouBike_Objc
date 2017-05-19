@@ -9,6 +9,8 @@
 #import "YoubikeManager.h"
 #import <Foundation/Foundation.h>
 #import <FBSDKAccessToken.h>
+#import "Stations.h"
+#import <CoreLocation/CoreLocation.h>
 
 @implementation YoubikeManager
 
@@ -27,7 +29,7 @@
     return instance;
 }
 
--(void) getStations:(void (^)(Stations *, NSError *))block
+-(void) getStations:(void (^)(NSMutableArray *, NSError *))block
 {
 
     NSString *url = [NSString stringWithFormat: @"http://52.198.40.72/youbike/v1/stations"];
@@ -52,9 +54,19 @@
 
         for (NSDictionary *stationDict in stationArray) {
             NSLog(@"ar: %@", stationDict[@"ar"]);
+            NSString *address = stationDict[@"ar"];
+            NSString *name = stationDict[@"sna"];
+            NSString *enName = stationDict[@"snaen"];
+            NSString *enaddress = stationDict[@"aren"];
+            NSString *numberOfRemainingBikes = stationDict[@"sbi"];
+            NSString *stationNumber = stationDict[@"sno"];
+            double lat = [stationDict[@"lat"] doubleValue];
+            double lng = [stationDict[@"lng"] doubleValue];
+            CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(lat,lng);
+            Stations *station = [[Stations alloc] initWithName:name enName:enName address:address enaddress:enaddress numberOfRemainingBikes:numberOfRemainingBikes stationNumber:stationNumber coordinate:&coordinate];
+            [self.stations addObject: station];
         }
-
-        block(task, nil);
+        block(self.stations,nil);
 
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 
@@ -81,19 +93,20 @@
     [request setHTTPBody:postData];
 
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
-                                                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-                                                    if (error) {
-                                                        NSLog(@"%@", error);
-                                                    } else {
-                                                        NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-                                                        NSDictionary *dataObject = jsonObject[@"data"];
-                                                        [[NSUserDefaults standardUserDefaults] setObject:dataObject[@"token"] forKey:@"token"];
-                                                        NSLog(@"%@", dataObject[@"token"]);
-                                                        [[NSUserDefaults standardUserDefaults] setObject:dataObject[@"tokenType"] forKey:@"tokenType"];
-                                                        NSLog(@"%@", dataObject[@"tokenType"]);
-                                                    }
-                                                }];
+    NSURLSessionDataTask *dataTask =
+        [session dataTaskWithRequest:request
+        completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+            if (error) {
+                NSLog(@"%@", error);
+            } else {
+                NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                NSDictionary *dataObject = jsonObject[@"data"];
+                [[NSUserDefaults standardUserDefaults] setObject:dataObject[@"token"] forKey:@"token"];
+                NSLog(@"%@", dataObject[@"token"]);
+                [[NSUserDefaults standardUserDefaults] setObject:dataObject[@"tokenType"] forKey:@"tokenType"];
+                NSLog(@"%@", dataObject[@"tokenType"]);
+            }
+        }];
     [dataTask resume];
 }
 

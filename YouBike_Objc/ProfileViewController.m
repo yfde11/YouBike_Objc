@@ -48,7 +48,7 @@
     SFSafariViewController *safariVC = [[SFSafariViewController alloc]initWithURL:[NSURL URLWithString:[[NSUserDefaults standardUserDefaults]stringForKey:@"link"]] entersReaderIfAvailable:NO];
     safariVC.delegate = self;
     [self presentViewController:safariVC animated:NO completion:nil];
-    [YoubikeManager.shared getStations:^(Stations *stationsFromAPI, NSError *error) {
+    [YoubikeManager.shared getStations:^(NSMutableArray *stationsFromAPI, NSError *error) {
         NSLog(@"e04e040e04:  %@", stationsFromAPI);
     }];
 }
